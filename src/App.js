@@ -75,16 +75,17 @@ class Rows extends React.Component{
         }
     render(){
         var content = this.props.jeapordy;
+        var row = "";
         if (this.props.value === "$200"){
-            var row = content.map(cat => <div className="number" key={cat.id}><h1 id={`${cat.id}-200`} onClick={(e) => this.onSelectionMade(e, cat.a1,`${cat.id}-200`)} key={cat.id} className={`value ${this.props.value}`}>{this.props.value}</h1></div>);
+            row = content.map(cat => <div className="number" key={cat.id}><h1 id={`${cat.id}-200`} onClick={(e) => this.onSelectionMade(e, cat.a1,`${cat.id}-200`)} key={cat.id} className={`value ${this.props.value}`}>{this.props.value}</h1></div>);
         } else if (this.props.value === "$400"){
-            var row = content.map(cat => <div className="number" key={cat.id}><h1 id={`${cat.id}-400`} onClick={(e) => this.onSelectionMade(e, cat.a2, `${cat.id}-400`)} key={cat.id} className={`value ${this.props.value}`}>{this.props.value}</h1></div>);
+            row = content.map(cat => <div className="number" key={cat.id}><h1 id={`${cat.id}-400`} onClick={(e) => this.onSelectionMade(e, cat.a2, `${cat.id}-400`)} key={cat.id} className={`value ${this.props.value}`}>{this.props.value}</h1></div>);
         } else if (this.props.value === "$600"){
-            var row = content.map(cat => <div className="number" key={cat.id}><h1 id={`${cat.id}-600`} onClick={(e) => this.onSelectionMade(e, cat.a3,`${cat.id}-600`)} key={cat.id} className={`value ${this.props.value}`}>{this.props.value}</h1></div>);
+            row = content.map(cat => <div className="number" key={cat.id}><h1 id={`${cat.id}-600`} onClick={(e) => this.onSelectionMade(e, cat.a3,`${cat.id}-600`)} key={cat.id} className={`value ${this.props.value}`}>{this.props.value}</h1></div>);
         } else if (this.props.value === "$800"){
-            var row = content.map(cat => <div className="number" key={cat.id}><h1 id={`${cat.id}-800`} onClick={(e) => this.onSelectionMade(e, cat.a4, `${cat.id}-800`)} key={cat.id} className={`value ${this.props.value}`}>{this.props.value}</h1></div>);
+            row = content.map(cat => <div className="number" key={cat.id}><h1 id={`${cat.id}-800`} onClick={(e) => this.onSelectionMade(e, cat.a4, `${cat.id}-800`)} key={cat.id} className={`value ${this.props.value}`}>{this.props.value}</h1></div>);
         } else{
-            var row = content.map(cat => <div className="number" key={cat.id}><h1 id={`${cat.id}-1000`} onClick={(e) => this.onSelectionMade(e, cat.a5, `${cat.id}-1000`)} key={cat.id} className={`value ${this.props.value}`}>{this.props.value}</h1></div>);
+            row = content.map(cat => <div className="number" key={cat.id}><h1 id={`${cat.id}-1000`} onClick={(e) => this.onSelectionMade(e, cat.a5, `${cat.id}-1000`)} key={cat.id} className={`value ${this.props.value}`}>{this.props.value}</h1></div>);
         }
         return(
             <div className="row">{row}</div>
